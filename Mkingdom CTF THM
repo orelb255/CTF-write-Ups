@@ -1,0 +1,11 @@
+at first we start with nmap:
+nmap -sC -sV -A <ip?
+we see 2 ports are open: 85 (http) and 22 (ssh)  
+
+then we proceed to fuzz the ip with gobuster:
+gobuster dir -u http://<ip> -w /usr/share/wordlist/dirbuster/< choose which wordlist you like>
+we see it found the /app directory
+visiting that directory we see at the bottom right corner a login bustton.
+
+
+
